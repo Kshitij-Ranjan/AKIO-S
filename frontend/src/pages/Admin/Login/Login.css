@@ -1,0 +1,104 @@
+.admin-login-container {
+  min-height: 100vh;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #fff;
+  padding: 2rem;
+}
+
+.admin-login-box {
+  width: 100%;
+  max-width: 400px;
+  background: transparent;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.admin-login-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 3rem;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.admin-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-login-field label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.admin-login-field input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.admin-login-field input:focus {
+  border-bottom-color: #fff;
+}
+
+.admin-login-error {
+  font-size: 0.75rem;
+  color: #ff4444;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.admin-login-submit {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.admin-login-submit:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.admin-login-submit:disabled {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}

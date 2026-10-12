@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+      routes:
+        - id: auth-service
+          uri: http://127.0.0.1:8081
+          predicates:
+            - Path=/api/auth/**, /api/admin/auth/**
+          filters:
+            - JwtAuthenticationFilter
+        - id: project-service
+          uri: http://127.0.0.1:8082
+          predicates:
+            - Path=/api/projects/**, /api/admin/projects/**, /api/admin/import/**
+          filters:
+            - JwtAuthenticationFilter
+        - id: contact-service
+          uri: http://127.0.0.1:8083
+          predicates:
+            - Path=/api/contact/**
+
+jwt:
+  secret: ${JWT_SECRET:8f7e6d5c4b3a291827364554637281900a9b8c7d6e5f4g3h2i1j0k9l8m7n6o5p4}
+
+spring.servlet.multipart.max-file-size: 1GB
+spring.servlet.multipart.max-request-size: 1GB

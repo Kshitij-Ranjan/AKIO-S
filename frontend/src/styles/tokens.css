@@ -1,0 +1,27 @@
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Z-Index Hierarchy */
+:root {
+  --z-bg: -10;
+  --z-atmosphere: 0;
+  --z-hero: 10;
+  --z-stage: 20;
+  --z-nav: 50;
+  --z-transition: 100;
+}

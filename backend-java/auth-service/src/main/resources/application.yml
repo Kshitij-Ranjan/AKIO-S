@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: auth-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/portfolio_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+jwt:
+  secret: ${JWT_SECRET:8f7e6d5c4b3a291827364554637281900a9b8c7d6e5f4g3h2i1j0k9l8m7n6o5p4}
+  expiration: 86400000

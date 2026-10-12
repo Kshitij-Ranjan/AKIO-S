@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: project-service
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3307/portfolio_db?allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+
+storage:
+  local:
+    dir: ./uploads

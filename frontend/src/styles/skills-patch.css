@@ -1,0 +1,20 @@
+.skills-cinematic__light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%); /* Sit slightly lower around shoulders/mid */
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(220, 120, 30, 0.25) 0%, rgba(180, 80, 20, 0.1) 30%, transparent 60%);
+  mix-blend-mode: screen;
+  filter: blur(40px);
+  animation: cinematic-flicker 12s ease-in-out infinite alternate;
+}
+
+@keyframes cinematic-flicker {
+  0% { opacity: 0.8; transform: translate(-50%, -20%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -22%) scale(1.05); }
+  100% { opacity: 0.85; transform: translate(-50%, -18%) scale(0.98); }
+}
