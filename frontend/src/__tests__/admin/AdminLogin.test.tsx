@@ -21,9 +21,10 @@ describe('AdminLogin', () => {
         </BrowserRouter>
       </AuthProvider>
     );
-    expect(screen.getByText('AKIO\'S CMS')).toBeInTheDocument();
+    expect(screen.getByText("AKIO'S")).toBeInTheDocument();
+    expect(screen.getByText("SECURE ACCESS")).toBeInTheDocument();
     expect(screen.getByLabelText(/Username/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Password/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Authorization Code/i)).toBeInTheDocument();
   });
 
   it('shows error on invalid credentials', async () => {
@@ -38,8 +39,8 @@ describe('AdminLogin', () => {
     );
 
     fireEvent.change(screen.getByLabelText(/Username/i), { target: { value: 'wrong' } });
-    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'wrong' } });
-    fireEvent.click(screen.getByRole('button', { name: /Sign in/i }));
+    fireEvent.change(screen.getByLabelText(/Authorization Code/i), { target: { value: 'wrong' } });
+    fireEvent.click(screen.getByRole('button', { name: /Enter/i }));
 
     await waitFor(() => {
       expect(screen.getByText('Invalid credentials')).toBeInTheDocument();
@@ -58,8 +59,8 @@ describe('AdminLogin', () => {
     );
 
     fireEvent.change(screen.getByLabelText(/Username/i), { target: { value: 'admin' } });
-    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'admin' } });
-    fireEvent.click(screen.getByRole('button', { name: /Sign in/i }));
+    fireEvent.change(screen.getByLabelText(/Authorization Code/i), { target: { value: 'admin' } });
+    fireEvent.click(screen.getByRole('button', { name: /Enter/i }));
 
     await waitFor(() => {
       expect(localStorage.getItem('akios_admin_token')).toBe('fake-token');
