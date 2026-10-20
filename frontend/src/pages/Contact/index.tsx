@@ -4,7 +4,7 @@ import { useReducedMotion } from '../../hooks/useReducedMotion';
 import { Link } from 'react-router-dom';
 
 // @ts-ignore
-import bgImage from "../../../../../Skillsrc/background_extra.jpeg";
+import bgImage from "../../assets/background_extra.jpeg";
 
 import './contact.css';
 

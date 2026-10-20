@@ -4,7 +4,7 @@ import { useGSAP, gsap } from '../../lib/gsap';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 // @ts-ignore
-import phoneImage from '../../../../../Skillsrc/Vintage_phone.png';
+import phoneImage from '../../assets/Vintage_phone.png';
 
 export function Contact() {
   const sectionRef = useRef<HTMLElement>(null);

@@ -1,5 +1,5 @@
 // @ts-ignore
-import bgImage from "../../../../../Skillsrc/background_extra.jpeg";
+import bgImage from "../../assets/background_extra.jpeg";
 import { Hero } from "../../components/sections/Hero";
 
 import { FilmStrip } from "../../components/sections/FilmStrip";

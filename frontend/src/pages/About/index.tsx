@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/ui/Button';
 
 // @ts-ignore
-import bgImage from "../../../../../Skillsrc/background_extra.jpeg";
+import bgImage from "../../assets/background_extra.jpeg";
 // @ts-ignore
-import portrait from "../../../../../Skillsrc/Me_removedBackground.png";
+import portrait from "../../assets/Me_removedBackground.png";
 
 import './about.css';
 
