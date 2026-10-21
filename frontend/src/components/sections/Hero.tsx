@@ -41,13 +41,16 @@ export function Hero() {
     <section className="hero" ref={heroRef}>
       <div className="hero__bg" ref={bgRef}>
         <video 
-          src="/api/projects/media/heroBackground.mp4" 
+          src="/media/hero/heroBackground.mp4"
           autoPlay 
           muted 
           loop 
           playsInline
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
+        >
+          <source src="/media/hero/heroBackground.mp4" type="video/mp4" />
+          <source src="/api/projects/media/heroBackground.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className="hero__content" ref={contentRef}>
         <div className="hero__title-wrapper">
